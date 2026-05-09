@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IP SORGU | FRANSA#FRS + SVİLİA HACK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0c15;
+            font-family: 'Inter', 'Orbitron', system-ui, sans-serif;
+            color: #eef2ff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .ddos-protection {
+            background: linear-gradient(90deg, #ff3366, #ffd700, #00d4ff);
+            height: 3px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1001;
+            animation: protectionPulse 2s ease infinite;
+        }
+
+        @keyframes protectionPulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .security-badge {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            z-index: 100;
+            border-left: 3px solid #00ff88;
+            font-family: monospace;
+        }
+
+        .rate-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            z-index: 100;
+            border-right: 3px solid #ffd700;
+            font-family: monospace;
+        }
+
+        .bg-cyber {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(ellipse at 20% 30%, rgba(255, 51, 102, 0.1), transparent 50%),
+                        radial-gradient(ellipse at 80% 70%, rgba(0, 212, 255, 0.08), transparent 50%),
+                        radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.05), transparent 60%);
+        }
+
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: linear-gradient(rgba(255, 51, 102, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 0 20px;
+            border-bottom: 2px solid rgba(255,51,102,0.4);
+            margin-bottom: 30px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .logo-item {
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .logo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 10px;
+            display: block;
+            border: 2px solid rgba(255,51,102,0.5);
+            transition: 0.3s;
+        }
+
+        .logo-item h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+        }
+
+        .collab-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            background: linear-gradient(135deg, #ff3366, #ffd700, #00d4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: 'Orbitron', monospace;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff3366, #ff6b6b);
+            color: white;
+            box-shadow: 0 0 15px rgba(255,51,102,0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #00d4ff, #0088cc);
+            color: white;
+            box-shadow: 0 0 15px rgba(0,212,255,0.4);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            color: #0a0c15;
+            box-shadow: 0 0 15px rgba(255,215,0,0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.05);
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .ip-input {
+            background: rgba(0,0,0,0.6);
+            border: 2px solid rgba(255,51,102,0.5);
+            border-radius: 50px;
+            padding: 14px 25px;
+            width: 350px;
+            color: white;
+            font-size: 1rem;
+            font-family: monospace;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .ip-input:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 15px rgba(0,212,255,0.3);
+        }
+
+        .result-card {
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(15px);
+            border-radius: 28px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(255,51,102,0.3);
+            transition: 0.3s;
+        }
+
+        .result-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            background: rgba(0,0,0,0.4);
+            border-radius: 16px;
+            padding: 12px 18px;
+            border-left: 3px solid #00d4ff;
+        }
+
+        .info-label {
+            font-size: 0.7rem;
+            color: #ffd700;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1rem;
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #00d4ff;
+            text-decoration: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255,51,102,0.3);
+            border-top-color: #ff3366;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #ff3366, #00d4ff);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,51,102,0.3);
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 700px) {
+            .btn-group { gap: 10px; }
+            .btn { padding: 10px 18px; font-size: 0.75rem; }
+            .ip-input { width: 100%; }
+            .logo-img { width: 60px; height: 60px; }
+            .info-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="ddos-protection"></div>
+<div class="security-badge">
+    <i class="fas fa-shield-alt"></i> DDoS KORUMASI AKTİF
+</div>
+<div class="rate-badge">
+    <i class="fas fa-tachometer-alt"></i> <span id="rateLimit">15</span> / 15 kalan
+</div>
+
+<div class="bg-cyber"></div>
+<div class="bg-grid"></div>
+
+<div class="container">
+    <div class="header">
+        <div class="logo-container">
+            <a href="https://t.me/fransafrs2" target="_blank" class="logo-item">
+                <div class="logo-img" style="background: linear-gradient(135deg, #ff3366, #ff6b6b); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🇫🇷</div>
+                <h3>FRANSA#FRS</h3>
+            </a>
+            <a href="https://t.me/sviliahack" target="_blank" class="logo-item">
+                <div class="logo-img" style="background: linear-gradient(135deg, #00d4ff, #0088cc); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔪</div>
+                <h3>SVİLİA HACK</h3>
+            </a>
+        </div>
+        <div class="collab-title">
+            🔥 FRANSA#FRS & SVİLİA HACK ORTAK ÇALIŞMASI 🔥
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <button class="btn btn-primary" id="myIpBtn">
+            <i class="fas fa-user-astronaut"></i> KENDİ IP'İM
+        </button>
+        <button class="btn btn-secondary" id="screenshotBtn">
+            <i class="fas fa-camera"></i> EKRAN GÖRÜNTÜSÜ AL
+        </button>
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="ipInput" class="ip-input" placeholder="IP Adresi gir (örn: 8.8.8.8)">
+        <button class="btn btn-warning" id="queryBtn">
+            <i class="fas fa-search"></i> SORGULA
+        </button>
+    </div>
+
+    <div id="resultContainer">
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>🔍 IP sorgulamak için yukarıya IP adresi girin...</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <i class="fas fa-code"></i> Geliştirici: <strong style="color:#ffd700">KADRBEQUİT</strong>
+        <br>
+        <small>🔒 Güvenli Bağlantı | Anlık IP Sorgulama</small>
+    </div>
+</div>
+
+<script>
+let requestCount = 0;
+let lastReset = Date.now();
+const MAX_REQUESTS = 15;
+const RESET_TIME = 10000;
+
+function checkRateLimit() {
+    const now = Date.now();
+    if (now - lastReset > RESET_TIME) {
+        requestCount = 0;
+        lastReset = now;
+    }
+    
+    if (requestCount >= MAX_REQUESTS) {
+        const remaining = Math.ceil((lastReset + RESET_TIME - now) / 1000);
+        showToast(`⚠️ Rate Limit Aşıldı! ${remaining} saniye bekleyin.`, true);
+        return false;
+    }
+    return true;
+}
+
+function incrementRateLimit() {
+    requestCount++;
+    updateRateDisplay();
+}
+
+function updateRateDisplay() {
+    const remaining = MAX_REQUESTS - requestCount;
+    document.getElementById('rateLimit').innerText = remaining >= 0 ? remaining : 0;
+}
+
+function showToast(message, isError = false) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.style.background = isError ? 'linear-gradient(135deg, #ff3366, #cc0033)' : 'linear-gradient(135deg, #00d4ff, #0088cc)';
+    toast.innerHTML = `<i class="fas ${isError ? 'fa-exclamation-triangle' : 'fa-check-circle'}"></i> ${message}`;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+function showLoading() {
+    document.getElementById('resultContainer').innerHTML = `
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>🔍 IP sorgulanıyor...</p>
+        </div>
+    `;
+}
+
+function displayResults(data, queryIp) {
+    const container = document.getElementById('resultContainer');
+    
+    if (!data || data.status === 'fail') {
+        container.innerHTML = `
+            <div class="result-card">
+                <div class="result-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    HATA
+                </div>
+                <p>${data?.message || 'IP sorgulanamadı. Lütfen geçerli bir IP adresi girin.'}</p>
+            </div>
+        `;
+        return;
+    }
+    
+    const googleMapsLink = `https://www.google.com/maps?q=${data.lat},${data.lon}`;
+    
+    const html = `
+        <div class="result-card" id="screenshotArea">
+            <div class="result-title">
+                <i class="fas fa-globe"></i>
+                IP BİLGİLERİ - ${data.query}
+            </div>
+            <div class="info-grid">
+                <div class="info-item"><div class="info-label">🌍 IP Adresi</div><div class="info-value">${data.query}</div></div>
+                <div class="info-item"><div class="info-label">📍 Ülke</div><div class="info-value">${data.country} (${data.countryCode})</div></div>
+                <div class="info-item"><div class="info-label">🏙️ Şehir</div><div class="info-value">${data.city || 'Bilinmiyor'} ${data.district ? `- ${data.district}` : ''}</div></div>
+                <div class="info-item"><div class="info-label">🗺️ Bölge</div><div class="info-value">${data.regionName || 'Bilinmiyor'}</div></div>
+                <div class="info-item"><div class="info-label">📮 Posta Kodu</div><div class="info-value">${data.zip || 'Bilinmiyor'}</div></div>
+                <div class="info-item"><div class="info-label">📡 ISP</div><div class="info-value">${data.isp || 'Bilinmiyor'}</div></div>
+                <div class="info-item"><div class="info-label">🏢 Organizasyon</div><div class="info-value">${data.org || 'Bilinmiyor'}</div></div>
+                <div class="info-item"><div class="info-label">🔢 ASN</div><div class="info-value">${data.as || 'Bilinmiyor'} (${data.asname || ''})</div></div>
+                <div class="info-item"><div class="info-label">⏰ Zaman Dilimi</div><div class="info-value">${data.timezone || 'Bilinmiyor'}</div></div>
+                <div class="info-item"><div class="info-label">📱 Mobil Bağlantı</div><div class="info-value">${data.mobile ? '✅ Evet' : '❌ Hayır'}</div></div>
+                <div class="info-item"><div class="info-label">🛡️ Proxy/VPN</div><div class="info-value">${data.proxy ? '⚠️ Evet' : '✅ Hayır'}</div></div>
+                <div class="info-item"><div class="info-label">☁️ Hosting</div><div class="info-value">${data.hosting ? '✅ Evet' : '❌ Hayır'}</div></div>
+                <div class="info-item"><div class="info-label">📍 Koordinat</div><div class="info-value">${data.lat}, ${data.lon}</div></div>
+            </div>
+            <div style="margin-top: 15px;">
+                <a href="${googleMapsLink}" target="_blank" class="map-link"><i class="fas fa-map-marked-alt"></i> Google Maps'te Görüntüle →</a>
+            </div>
+        </div>
+    `;
+    
+    container.innerHTML = html;
+}
+
+async function queryIP(ip) {
+    try {
+        const url = `https://ip-api.com/json/${ip}?fields=status,message,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,isp,org,as,asname,mobile,proxy,hosting,query`;
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        showToast(`Bağlantı hatası: ${error.message}`, true);
+        return null;
+    }
+}
+
+async function getMyIP() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+    } catch (error) {
+        showToast(`IP alınamadı: ${error.message}`, true);
+        return null;
+    }
+}
+
+async function takeScreenshot() {
+    const element = document.getElementById('resultContainer');
+    const resultCard = element.querySelector('.result-card');
+    
+    if (!resultCard) {
+        showToast("Önce bir IP sorgulayın!", true);
+        return;
+    }
+    
+    showToast("📸 Ekran görüntüsü alınıyor...", false);
+    
+    try {
+        const canvas = await html2canvas(resultCard, {
+            scale: 2,
+            backgroundColor: '#0a0c15',
+            logging: false
+        });
+        
+        const link = document.createElement('a');
+        link.download = `ip_screenshot_${Date.now()}.png`;
+        link.href = canvas.toDataURL();
+        link.click();
+        
+        const resultText = resultCard.innerText;
+        const blob = new Blob([resultText], { type: 'text/plain' });
+        const txtLink = document.createElement('a');
+        txtLink.download = `ip_query_${Date.now()}.txt`;
+        txtLink.href = URL.createObjectURL(blob);
+        txtLink.click();
+        URL.revokeObjectURL(txtLink.href);
+        
+        showToast("✅ Ekran görüntüsü ve TXT kaydedildi!");
+    } catch (error) {
+        showToast(`Hata: ${error.message}`, true);
+    }
+}
+
+document.getElementById('queryBtn').addEventListener('click', async () => {
+    if (!checkRateLimit()) return;
+    
+    const ip = document.getElementById('ipInput').value.trim();
+    if (!ip) {
+        showToast("Lütfen bir IP adresi girin!", true);
+        return;
+    }
+    
+    if (!/^(\d{1,3}\.){3}\d{1,3}$/.test(ip) && !ip.includes(':')) {
+        showToast("Geçersiz IP formatı!", true);
+        return;
+    }
+    
+    incrementRateLimit();
+    showLoading();
+    const data = await queryIP(ip);
+    if (data && data.status === 'success') {
+        displayResults(data, ip);
+    } else {
+        displayResults({ status: 'fail', message: data?.message || 'IP bulunamadı' }, ip);
+    }
+});
+
+document.getElementById('myIpBtn').addEventListener('click', async () => {
+    if (!checkRateLimit()) return;
+    
+    showLoading();
+    const myIp = await getMyIP();
+    if (myIp) {
+        incrementRateLimit();
+        document.getElementById('ipInput').value = myIp;
+        const data = await queryIP(myIp);
+        if (data && data.status === 'success') {
+            displayResults(data, myIp);
+        } else {
+            displayResults({ status: 'fail', message: data?.message || 'IP bilgisi alınamadı' }, myIp);
+        }
+    }
+});
+
+document.getElementById('screenshotBtn').addEventListener('click', takeScreenshot);
+
+document.getElementById('ipInput').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        document.getElementById('queryBtn').click();
+    }
+});
+
+window.addEventListener('load', updateRateDisplay);
+setInterval(() => {
+    const now = Date.now();
+    if (now - lastReset > RESET_TIME) {
+        requestCount = 0;
+        lastReset = now;
+        updateRateDisplay();
+    }
+}, 1000);
+</script>
+</body>
+</html>
