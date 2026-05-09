@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>IP SORGU | FRANSA#FRS + SVİLİA HACK</title>
+    <title>IP OSINT | FRANSA#FRS + SVİLİA HACK</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
@@ -97,7 +97,6 @@
             padding: 20px;
         }
 
-        /* Header */
         .header {
             text-align: center;
             padding: 30px 0 20px;
@@ -118,6 +117,7 @@
             text-align: center;
             cursor: pointer;
             transition: 0.3s;
+            text-decoration: none;
         }
 
         .logo-item:hover {
@@ -128,21 +128,27 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 auto 10px;
-            display: block;
+            font-size: 2rem;
             border: 2px solid rgba(255,51,102,0.5);
             transition: 0.3s;
         }
 
+        .fransa-logo { background: linear-gradient(135deg, #ff3366, #ff6b6b); }
+        .svilia-logo { background: linear-gradient(135deg, #00d4ff, #0088cc); }
+
         .logo-item h3 {
             font-family: 'Orbitron', monospace;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            color: #eef2ff;
         }
 
         .collab-title {
             font-family: 'Orbitron', monospace;
-            font-size: 1.2rem;
+            font-size: 1rem;
             background: linear-gradient(135deg, #ff3366, #ffd700, #00d4ff);
             -webkit-background-clip: text;
             background-clip: text;
@@ -170,7 +176,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .btn-primary {
@@ -209,7 +215,7 @@
             border: 2px solid rgba(255,51,102,0.5);
             border-radius: 50px;
             padding: 14px 25px;
-            width: 350px;
+            width: 300px;
             color: white;
             font-size: 1rem;
             font-family: monospace;
@@ -234,13 +240,14 @@
 
         .result-title {
             font-family: 'Orbitron', monospace;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #ffd700;
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .info-grid {
@@ -264,7 +271,7 @@
         }
 
         .info-value {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-family: monospace;
             word-break: break-all;
         }
@@ -307,6 +314,12 @@
             animation: slideIn 0.3s ease;
         }
 
+        .error-card {
+            background: rgba(255,51,102,0.15);
+            border: 1px solid #ff3366;
+            text-align: center;
+        }
+
         @keyframes slideIn {
             from { opacity: 0; transform: translateX(100px); }
             to { opacity: 1; transform: translateX(0); }
@@ -322,10 +335,11 @@
 
         @media (max-width: 700px) {
             .btn-group { gap: 10px; }
-            .btn { padding: 10px 18px; font-size: 0.75rem; }
+            .btn { padding: 10px 16px; font-size: 0.7rem; }
             .ip-input { width: 100%; }
-            .logo-img { width: 60px; height: 60px; }
-            .info-grid { grid-template-columns: 1fr; }
+            .logo-img { width: 60px; height: 60px; font-size: 1.5rem; }
+            .collab-title { font-size: 0.8rem; }
+            .result-title { font-size: 1rem; }
         }
     </style>
 </head>
@@ -346,16 +360,16 @@
     <div class="header">
         <div class="logo-container">
             <a href="https://t.me/fransafrs2" target="_blank" class="logo-item">
-                <div class="logo-img" style="background: linear-gradient(135deg, #ff3366, #ff6b6b); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🇫🇷</div>
+                <div class="logo-img fransa-logo">🇫🇷</div>
                 <h3>FRANSA#FRS</h3>
             </a>
             <a href="https://t.me/sviliahack" target="_blank" class="logo-item">
-                <div class="logo-img" style="background: linear-gradient(135deg, #00d4ff, #0088cc); display: flex; align-items: center; justify-content: center; font-size: 2rem;">🔪</div>
+                <div class="logo-img svilia-logo">🗡️</div>
                 <h3>SVİLİA HACK</h3>
             </a>
         </div>
         <div class="collab-title">
-            🔥 FRANSA#FRS & SVİLİA HACK ORTAK ÇALIŞMASI 🔥
+            🔥 FRANSA#FRS & SVİLİA HACK ORTAK ÇALIŞMASı 🔥
         </div>
     </div>
 
@@ -385,7 +399,7 @@
     <div class="footer">
         <i class="fas fa-code"></i> Geliştirici: <strong style="color:#ffd700">KADRBEQUİT</strong>
         <br>
-        <small>🔒 Güvenli Bağlantı | Anlık IP Sorgulama</small>
+        <small>🔒 DDoS Korumalı | Anlık IP Sorgulama | ip-api.com</small>
     </div>
 </div>
 
@@ -443,12 +457,13 @@ function displayResults(data, queryIp) {
     
     if (!data || data.status === 'fail') {
         container.innerHTML = `
-            <div class="result-card">
+            <div class="result-card error-card">
                 <div class="result-title">
                     <i class="fas fa-exclamation-triangle"></i>
-                    HATA
+                    ⚠️ HATA
                 </div>
                 <p>${data?.message || 'IP sorgulanamadı. Lütfen geçerli bir IP adresi girin.'}</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">💡 İpucu: 8.8.8.8 veya 1.1.1.1 deneyin</p>
             </div>
         `;
         return;
@@ -460,25 +475,24 @@ function displayResults(data, queryIp) {
         <div class="result-card" id="screenshotArea">
             <div class="result-title">
                 <i class="fas fa-globe"></i>
-                IP BİLGİLERİ - ${data.query}
+                🌐 IP BİLGİLERİ - ${data.query}
             </div>
             <div class="info-grid">
                 <div class="info-item"><div class="info-label">🌍 IP Adresi</div><div class="info-value">${data.query}</div></div>
                 <div class="info-item"><div class="info-label">📍 Ülke</div><div class="info-value">${data.country} (${data.countryCode})</div></div>
-                <div class="info-item"><div class="info-label">🏙️ Şehir</div><div class="info-value">${data.city || 'Bilinmiyor'} ${data.district ? `- ${data.district}` : ''}</div></div>
+                <div class="info-item"><div class="info-label">🏙️ Şehir</div><div class="info-value">${data.city || 'Bilinmiyor'}</div></div>
                 <div class="info-item"><div class="info-label">🗺️ Bölge</div><div class="info-value">${data.regionName || 'Bilinmiyor'}</div></div>
                 <div class="info-item"><div class="info-label">📮 Posta Kodu</div><div class="info-value">${data.zip || 'Bilinmiyor'}</div></div>
                 <div class="info-item"><div class="info-label">📡 ISP</div><div class="info-value">${data.isp || 'Bilinmiyor'}</div></div>
                 <div class="info-item"><div class="info-label">🏢 Organizasyon</div><div class="info-value">${data.org || 'Bilinmiyor'}</div></div>
-                <div class="info-item"><div class="info-label">🔢 ASN</div><div class="info-value">${data.as || 'Bilinmiyor'} (${data.asname || ''})</div></div>
+                <div class="info-item"><div class="info-label">🔢 ASN</div><div class="info-value">${data.as || 'Bilinmiyor'}</div></div>
                 <div class="info-item"><div class="info-label">⏰ Zaman Dilimi</div><div class="info-value">${data.timezone || 'Bilinmiyor'}</div></div>
                 <div class="info-item"><div class="info-label">📱 Mobil Bağlantı</div><div class="info-value">${data.mobile ? '✅ Evet' : '❌ Hayır'}</div></div>
                 <div class="info-item"><div class="info-label">🛡️ Proxy/VPN</div><div class="info-value">${data.proxy ? '⚠️ Evet' : '✅ Hayır'}</div></div>
-                <div class="info-item"><div class="info-label">☁️ Hosting</div><div class="info-value">${data.hosting ? '✅ Evet' : '❌ Hayır'}</div></div>
                 <div class="info-item"><div class="info-label">📍 Koordinat</div><div class="info-value">${data.lat}, ${data.lon}</div></div>
             </div>
             <div style="margin-top: 15px;">
-                <a href="${googleMapsLink}" target="_blank" class="map-link"><i class="fas fa-map-marked-alt"></i> Google Maps'te Görüntüle →</a>
+                <a href="${googleMapsLink}" target="_blank" class="map-link"><i class="fas fa-map-marked-alt"></i> 📍 Google Maps'te Görüntüle →</a>
             </div>
         </div>
     `;
@@ -488,13 +502,25 @@ function displayResults(data, queryIp) {
 
 async function queryIP(ip) {
     try {
-        const url = `https://ip-api.com/json/${ip}?fields=status,message,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,isp,org,as,asname,mobile,proxy,hosting,query`;
-        const response = await fetch(url);
-        const data = await response.json();
-        return data;
+        fetch(`https://ip-api.com/json/${encodeURIComponent(ip)}?fields=66846719`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                displayResults(data, ip);
+            } else {
+                displayResults({ status: 'fail', message: data.message || 'IP bulunamadı' }, ip);
+            }
+        })
+        .catch(error => {
+            displayResults({ status: 'fail', message: 'Bağlantı hatası: ' + error.message }, ip);
+        });
     } catch (error) {
-        showToast(`Bağlantı hatası: ${error.message}`, true);
-        return null;
+        displayResults({ status: 'fail', message: 'Bağlantı hatası: ' + error.message }, ip);
     }
 }
 
@@ -513,8 +539,8 @@ async function takeScreenshot() {
     const element = document.getElementById('resultContainer');
     const resultCard = element.querySelector('.result-card');
     
-    if (!resultCard) {
-        showToast("Önce bir IP sorgulayın!", true);
+    if (!resultCard || resultCard.classList.contains('loading')) {
+        showToast("⚠️ Önce bir IP sorgulayın!", true);
         return;
     }
     
@@ -524,7 +550,8 @@ async function takeScreenshot() {
         const canvas = await html2canvas(resultCard, {
             scale: 2,
             backgroundColor: '#0a0c15',
-            logging: false
+            logging: false,
+            useCORS: true
         });
         
         const link = document.createElement('a');
@@ -542,7 +569,7 @@ async function takeScreenshot() {
         
         showToast("✅ Ekran görüntüsü ve TXT kaydedildi!");
     } catch (error) {
-        showToast(`Hata: ${error.message}`, true);
+        showToast(`❌ Hata: ${error.message}`, true);
     }
 }
 
@@ -551,23 +578,19 @@ document.getElementById('queryBtn').addEventListener('click', async () => {
     
     const ip = document.getElementById('ipInput').value.trim();
     if (!ip) {
-        showToast("Lütfen bir IP adresi girin!", true);
+        showToast("⚠️ Lütfen bir IP adresi girin!", true);
         return;
     }
     
-    if (!/^(\d{1,3}\.){3}\d{1,3}$/.test(ip) && !ip.includes(':')) {
-        showToast("Geçersiz IP formatı!", true);
+    const ipRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
+    if (!ipRegex.test(ip)) {
+        showToast("⚠️ Geçersiz IP formatı! Örnek: 8.8.8.8", true);
         return;
     }
     
     incrementRateLimit();
     showLoading();
-    const data = await queryIP(ip);
-    if (data && data.status === 'success') {
-        displayResults(data, ip);
-    } else {
-        displayResults({ status: 'fail', message: data?.message || 'IP bulunamadı' }, ip);
-    }
+    await queryIP(ip);
 });
 
 document.getElementById('myIpBtn').addEventListener('click', async () => {
@@ -578,12 +601,9 @@ document.getElementById('myIpBtn').addEventListener('click', async () => {
     if (myIp) {
         incrementRateLimit();
         document.getElementById('ipInput').value = myIp;
-        const data = await queryIP(myIp);
-        if (data && data.status === 'success') {
-            displayResults(data, myIp);
-        } else {
-            displayResults({ status: 'fail', message: data?.message || 'IP bilgisi alınamadı' }, myIp);
-        }
+        await queryIP(myIp);
+    } else {
+        displayResults({ status: 'fail', message: 'Kendi IP adresiniz alınamadı!' }, null);
     }
 });
 
@@ -595,7 +615,11 @@ document.getElementById('ipInput').addEventListener('keypress', (e) => {
     }
 });
 
-window.addEventListener('load', updateRateDisplay);
+window.addEventListener('load', () => {
+    updateRateDisplay();
+    document.getElementById('ipInput').value = '8.8.8.8';
+});
+
 setInterval(() => {
     const now = Date.now();
     if (now - lastReset > RESET_TIME) {
