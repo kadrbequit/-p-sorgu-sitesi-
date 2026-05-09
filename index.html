@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -502,23 +503,14 @@ function displayResults(data, queryIp) {
 
 async function queryIP(ip) {
     try {
-        fetch(`https://ip-api.com/json/${encodeURIComponent(ip)}?fields=66846719`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
-                displayResults(data, ip);
-            } else {
-                displayResults({ status: 'fail', message: data.message || 'IP bulunamadı' }, ip);
-            }
-        })
-        .catch(error => {
-            displayResults({ status: 'fail', message: 'Bağlantı hatası: ' + error.message }, ip);
-        });
+        const response = await fetch(`https://ip-api.com/json/${encodeURIComponent(ip)}?fields=66846719`);
+        const data = await response.json();
+        
+        if (data.status === 'success') {
+            displayResults(data, ip);
+        } else {
+            displayResults({ status: 'fail', message: data.message || 'IP bulunamadı' }, ip);
+        }
     } catch (error) {
         displayResults({ status: 'fail', message: 'Bağlantı hatası: ' + error.message }, ip);
     }
@@ -539,7 +531,7 @@ async function takeScreenshot() {
     const element = document.getElementById('resultContainer');
     const resultCard = element.querySelector('.result-card');
     
-    if (!resultCard || resultCard.classList.contains('loading')) {
+    if (!resultCard || resultCard.classList.contains('loading') || element.querySelector('.loading')) {
         showToast("⚠️ Önce bir IP sorgulayın!", true);
         return;
     }
@@ -618,6 +610,10 @@ document.getElementById('ipInput').addEventListener('keypress', (e) => {
 window.addEventListener('load', () => {
     updateRateDisplay();
     document.getElementById('ipInput').value = '8.8.8.8';
+    // Sayfa açılırken otomatik sorgula
+    setTimeout(() => {
+        document.getElementById('queryBtn').click();
+    }, 500);
 });
 
 setInterval(() => {
